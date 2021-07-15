@@ -5,7 +5,7 @@ app.get('/', (req, res) => {
   res.status(200).send("Listen!");
 });
 
-app.listen(3000);
+app.listen(2340);
 
 const Discord = require('discord.js');
 const Vex = require('./lib/Client.js');
