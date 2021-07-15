@@ -1,3 +1,12 @@
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.status(200).send("Listen!");
+});
+
+app.listen(3000);
+
 const Discord = require('discord.js');
 const Vex = require('./lib/Client.js');
 const Client = new Vex({disableMentions: "everyone"});
@@ -8,8 +17,8 @@ Client.on("ready", () => {
     Client.user.setActivity('Khaly rpg server | '+Client.settings.prefix+"help 馃", {
         type: "PLAYING"
     });
-    Client.logger.info("Logged as: "+Client.user.tag);
-    registerCommands().then(() => Client.logger.info("Se han cargado los comandos correctamente."));
+    console.log("Logged as: "+Client.user.tag);
+    //registerCommands().then(() => console.log("Se han cargado los comandos correctamente."));
 });
 
 Client.login(require('./data.json').token);

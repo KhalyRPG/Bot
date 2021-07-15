@@ -108,4 +108,4 @@ data.json
 node_modules/
 package-lock.json
 start.bat
->>>>>>> 81f3702 (Release the bot (wow unfinished))
+.replit
